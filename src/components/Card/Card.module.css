@@ -1,0 +1,61 @@
+.card {
+  background: #3f3f4b;
+  border-radius: 1em;
+  margin: 1em 0;
+  padding: 0 1em;
+}
+.link {
+  composes: whitec from '../Common.module.css';
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.card_block {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+.card_block:first-child {
+  border-bottom: 1px solid #9c9ca41a;
+}
+.icon_img {
+  font-size: 2em;
+  padding-right: 0.2em;
+}
+.card_type_wrapper {
+  float: right;
+}
+.card_name {
+  composes: grayc from '../Common.module.css';
+}
+.card_type {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.card_amount {
+  text-align: right;
+}
+.amount_sum {
+  font-size: 1.2em;
+}
+.amount_cur {
+  composes: grayc from '../Common.module.css';
+  padding-top: 0.2em;
+}
+.card_title {
+  composes: grayc from '../Common.module.css';
+  padding-top: 0.2em;
+}
+.card_grow {
+  text-align: right;
+}
+.grow_title {
+  composes: grayc from '../Common.module.css';
+  padding-top: 0.2em;
+}
+.grow_green {
+  composes: greenc from '../Common.module.css';
+}
+.grow_red {
+  composes: redc from '../Common.module.css';
+}

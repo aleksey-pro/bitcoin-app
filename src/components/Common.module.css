@@ -1,0 +1,39 @@
+html,
+body {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #363845;
+}
+
+/* Font colors */
+
+.whitec {
+  color: #fff;
+}
+
+.grayc {
+  color: #9c9ca4;
+}
+
+.greenc {
+  color: #0fdb86;
+}
+
+.redc {
+  color: #ff7976;
+}

@@ -1,0 +1,22 @@
+{
+  "currencies": [
+    {
+      "type": "btc",
+      "name": "Bitcoin",
+      "amount": 0.855887,
+      "grow": 2.75
+    },
+    {
+      "type": "eth",
+      "name": "Ethereum",
+      "amount": 6.335192,
+      "grow": -2.91
+    },
+    {
+      "type": "xrp",
+      "name": "Ripple",
+      "amount": 656.484224,
+      "grow": 45.23
+    }
+  ]
+}

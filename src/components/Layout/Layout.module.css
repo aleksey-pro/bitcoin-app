@@ -1,0 +1,10 @@
+.wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 31.25em;
+  min-width: 18.75em;
+  padding: 0 1em;
+  background: #363845;
+  font-family: Arial, sans-serif;
+  composes: whitec from '../Common.module.css';
+}

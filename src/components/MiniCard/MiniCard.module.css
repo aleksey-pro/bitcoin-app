@@ -1,0 +1,43 @@
+.link {
+  composes: whitec from '../Common.module.css';
+  text-decoration: none;
+}
+.mini_card {
+  min-width: 200px;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ffffff1c;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+.mini_card_active {
+  composes: mini_card;
+  background: #ffffff1c;
+}
+.icon_img {
+  font-size: 2em;
+  padding-right: 0.1em;
+}
+.card_type_wrapper {
+  float: right;
+}
+.card_name {
+  color: #9c9ca4;
+  font-size: 0.6em;
+}
+.card_type {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.card_amount {
+  text-align: right;
+}
+.amount_sum {
+  font-size: 0.9em;
+}
+.amount_cur {
+  color: #9c9ca4;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+}

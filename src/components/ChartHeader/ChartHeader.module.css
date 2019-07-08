@@ -1,0 +1,5 @@
+.link {
+  composes: whitec from '../Common.module.css';
+  text-decoration: none;
+  font-size: 1.5em;
+}

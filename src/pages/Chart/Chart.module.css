@@ -1,0 +1,36 @@
+.swiper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.chart_header {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+.icon_img {
+  font-size: 3em;
+  padding-right: 0.2em;
+}
+.card_type_wrapper {
+  float: right;
+}
+.card_name {
+  color: #9c9ca4;
+}
+.card_type {
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+.card_amount {
+  text-align: right;
+}
+.amount_sum {
+  font-size: 1.7em;
+}
+.amount_cur {
+  color: #9c9ca4;
+  padding-top: 0.2em;
+}

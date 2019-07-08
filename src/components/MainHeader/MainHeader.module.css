@@ -1,0 +1,15 @@
+.input {
+  background: transparent;
+  outline: none;
+  border: none;
+  padding-left: 0.5em;
+  color: #fff;
+}
+.search {
+  fill: #fff;
+  float: left;
+}
+.notify {
+  fill: #fff;
+  float: right;
+}
