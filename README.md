@@ -20,7 +20,7 @@
 
 Ответить утвердительно на предложние "Добавить на главный экран".
 
-https://jokes-app-9e653.firebaseapp.com/
+https://bitcoin-app-16476.firebaseapp.com/
 
 ### Стек:
 
