@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 
 import 'normalize.css';
 import 'crypto-icons/font.css';
@@ -25,7 +25,7 @@ const store = createStore(
 
 const history = syncHistoryWithStore(browserHistory, store);
 
-export default class App extends React.Component {
+export default class App extends PureComponent {
   // В том случае если хотим пробросить config в store и вытаскивать данные от туда,
   // но это оказалось очень трудоемко писать потом редюсеры, поэтому проброшу config
   // просто через props cверху вниз

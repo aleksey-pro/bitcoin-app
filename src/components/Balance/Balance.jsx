@@ -1,29 +1,32 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { totalPriceSelector } from '../../selectors';
 import styles from './Balance.module.css';
 
-class Balance extends Component {
+class Balance extends PureComponent {
   render() {
-    const { totalPrice, currencies } = this.props;
-    let totalGrow = 0;
-    currencies.map(cur => {
-      return (totalGrow += cur.grow);
-    });
+    const { totalPrice } = this.props;
+    // old way without reselect
+    // const { totalPrice, currencies } = this.props;
+    // let totalGrow = 0;
+    // currencies.map(cur => {
+    //   return (totalGrow += cur.grow);
+    // });
     return (
       <div className={styles.wrapper}>
         <div className={styles.title}>Your total Balance</div>
         <div className={styles.balance}>
           <span className={styles.dollar}>$</span>
-          {totalPrice}
+          {totalPrice.toFixed(2)}
         </div>
         <div className={styles.subtitle}>24h Changes</div>
-        {totalGrow >= 0 ? (
+        {totalPrice >= 0 ? (
           <div className={styles.grow_green}>
-            + ${totalGrow.toFixed(2)} &#8593;
+            + ${totalPrice.toFixed(2)} &#8593;
           </div>
         ) : (
           <div className={styles.grow_red}>
-            - ${totalGrow.toFixed(2)} &#8595;
+            - ${totalPrice.toFixed(2)} &#8595;
           </div>
         )}
       </div>
@@ -31,8 +34,13 @@ class Balance extends Component {
   }
 }
 
+// old way without reselect
+// const mapStateToProps = state => ({
+//   totalPrice: state.total.price.toFixed(2),
+// });
+
 const mapStateToProps = state => ({
-  totalPrice: state.total.price.toFixed(2),
+  totalPrice: totalPriceSelector(state),
 });
 
 export default connect(mapStateToProps)(Balance);
