@@ -24,7 +24,7 @@ https://bitcoin-app-16476.firebaseapp.com/
 
 ### Стек:
 
-1. redux
+1. redux + reselect
 2. css-modules
 3. react-router
 4. create-react-app
