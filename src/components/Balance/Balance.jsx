@@ -3,15 +3,11 @@ import { connect } from 'react-redux';
 import { totalPriceSelector } from '../../selectors';
 import styles from './Balance.module.css';
 
+import withGrow from '../../hoc/withGrow';
+
 class Balance extends PureComponent {
   render() {
-    const { totalPrice } = this.props;
-    // old way without reselect
-    // const { totalPrice, currencies } = this.props;
-    // let totalGrow = 0;
-    // currencies.map(cur => {
-    //   return (totalGrow += cur.grow);
-    // });
+    const { totalPrice, totalGrow } = this.props;
     return (
       <div className={styles.wrapper}>
         <div className={styles.title}>Your total Balance</div>
@@ -21,13 +17,9 @@ class Balance extends PureComponent {
         </div>
         <div className={styles.subtitle}>24h Changes</div>
         {totalPrice >= 0 ? (
-          <div className={styles.grow_green}>
-            + ${totalPrice.toFixed(2)} &#8593;
-          </div>
+          <div className={styles.grow_green}>+ ${totalGrow} &#8593;</div>
         ) : (
-          <div className={styles.grow_red}>
-            - ${totalPrice.toFixed(2)} &#8595;
-          </div>
+          <div className={styles.grow_red}>- ${totalGrow} &#8595;</div>
         )}
       </div>
     );
@@ -43,4 +35,4 @@ const mapStateToProps = state => ({
   totalPrice: totalPriceSelector(state),
 });
 
-export default connect(mapStateToProps)(Balance);
+export default withGrow(connect(mapStateToProps)(Balance));
