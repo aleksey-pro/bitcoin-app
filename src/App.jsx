@@ -39,11 +39,11 @@ export default class App extends PureComponent {
           <Route component={Layout}>
             <Route
               path="/"
-              component={props => <Main {...props} data={data} />}
+              component={props => <Main {...props} {...data} />}
             />
             <Route
               path="/charts/:id"
-              component={props => <Chart {...props} data={data} />}
+              component={props => <Chart {...props} {...data} />}
             />
           </Route>
         </Router>

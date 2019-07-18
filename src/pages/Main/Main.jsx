@@ -8,14 +8,14 @@ import MainHeader from '../../components/MainHeader/MainHeader';
 
 export default class Main extends Component {
   render() {
-    const { data } = this.props;
+    const { currencies } = this.props;
     return (
       <div className={styles.wrapper}>
         <MainHeader />
-        <Balance currencies={data.currencies} />
+        <Balance currencies={currencies} />
         <div className={styles.cards}>
-          {data.currencies.map((currency, index) => (
-            <Card key={index} idx={index} currency={currency} />
+          {currencies.map((currency, index) => (
+            <Card key={index} idx={index} {...currency} />
           ))}
         </div>
       </div>

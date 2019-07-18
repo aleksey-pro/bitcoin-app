@@ -18,8 +18,8 @@ class Chart extends Component {
   };
 
   render() {
-    const { data, routeParams, curPrice, params } = this.props;
-    const curr = data.currencies.filter(currency => {
+    const { currencies, routeParams, curPrice, params } = this.props;
+    const curr = currencies.filter(currency => {
       return currency.type === routeParams.id;
     })[0];
     const currAmount = curPrice && (curr.amount * curPrice.USD).toFixed(2);
@@ -28,20 +28,20 @@ class Chart extends Component {
       <div className={styles.wrapper}>
         <ChartHeader />
         <div className={styles.swiper}>
-          {data.currencies.map((currency, index) => {
+          {currencies.map((currency, index) => {
             return (
               <MiniCard
-                currency={currency}
+                {...currency}
                 key={index}
                 idx={index}
-                params={params}
+                {...params}
                 onClick={this.forceFetchHandle()}
               />
             );
           })}
         </div>
         {renderChartInfo(curr, currAmount)}
-        <ChartGraph params={params} />
+        <ChartGraph />
       </div>
     );
   }
