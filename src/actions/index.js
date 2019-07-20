@@ -2,7 +2,6 @@ import {
   FETCH_PRICE,
   FETCH_PRICE_SUCCESS,
   REQUEST_ERRORED,
-  UPDATE_PRICE,
   FETCH_GRAPH,
   FETCH_GRAPH_SUCCESS,
 } from './types';
@@ -16,27 +15,16 @@ const getPrice = price => dispatch => {
   });
 };
 
-const updatePrice = data => dispatch => {
-  dispatch({
-    type: UPDATE_PRICE,
-    payload: data,
-  });
-};
-
 export const fetchPrice = type => async dispatch => {
   dispatch({
     type: FETCH_PRICE,
     isFetching: true,
   });
   try {
-    await getPriceApi(type)
-      .then(data => {
-        dispatch(getPrice(data));
-        return data;
-      })
-      .then(data => {
-        dispatch(updatePrice(data));
-      });
+    await getPriceApi(type).then(data => {
+      dispatch(getPrice(data));
+      return data;
+    });
   } catch (err) {
     dispatch({
       type: REQUEST_ERRORED,

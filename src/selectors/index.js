@@ -1,8 +1,11 @@
 import { createSelector } from 'reselect';
 
-const getTotalPrice = state => state.total;
+const getPrices = state => state.prices.types.map(price => price.USD);
 
 export const totalPriceSelector = createSelector(
-  [getTotalPrice],
-  total => total.price
+  [getPrices],
+  price =>
+    price.reduce((acc, i) => {
+      return acc + i;
+    }, 0)
 );
