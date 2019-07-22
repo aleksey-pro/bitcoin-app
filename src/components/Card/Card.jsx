@@ -5,6 +5,10 @@ import { Link } from 'react-router';
 import { fetchPrice } from '../../actions';
 
 class Card extends Component {
+  // state = {
+  //   newPrice: null,
+  // };
+
   componentDidMount() {
     const { fetchPrice, routing, type } = this.props;
     // Запретим фетчить данные при переходе по ссылке, чтобы сумма повтороно не считалась
@@ -13,6 +17,27 @@ class Card extends Component {
       routing.pathname === '/' &&
       fetchPrice(fetchType);
   }
+
+  // Если фетчить данные в родителе и рендерть компонент по их полчению, то curPrice будет видна
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log(this.props.curPrice); // undefined
+  //   console.log(nextProps.curPrice); // {USD: 100}
+  //   return true;
+  // }
+
+  // Я так понимаю, что даже при update компонента curPrice снова фетчится и не видна (см выше)
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log(prevProps.curPrice); // undefined
+  // }
+
+  // Если фетчить данные в родителе и рендерть еомпонент по их полчению, то curPrice будет видна. Проверка юудет не нужна
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log(props.curPrice);
+  //   console.log(props.amount);
+  //   if (props.curPrice) {
+  //     return { newPrice: props.curPrice };
+  //   } else return null;
+  // }
 
   render() {
     const { curPrice, amount, type, name, grow, idx } = this.props;
