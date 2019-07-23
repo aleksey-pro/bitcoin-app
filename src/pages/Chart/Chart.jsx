@@ -5,6 +5,7 @@ import { fetchDayHistory } from '../../actions';
 
 import ChartHeader from '../../components/ChartHeader/ChartHeader';
 import ChartGraph from '../../components/ChartGraph/ChartGraph';
+import CardContainer from '../../component-containers/CardContainer';
 import MiniCard from '../../components/MiniCard/MiniCard';
 
 class Chart extends Component {
@@ -30,13 +31,17 @@ class Chart extends Component {
         <div className={styles.swiper}>
           {currencies.map((currency, index) => {
             return (
-              <MiniCard
-                {...currency}
-                key={index}
-                idx={index}
-                {...params}
-                onClick={this.forceFetchHandle()}
-              />
+              <CardContainer key={index} idx={index} {...currency}>
+                {props => (
+                  <MiniCard
+                    key={index}
+                    idx={index}
+                    {...props}
+                    {...params}
+                    onClick={this.forceFetchHandle()}
+                  />
+                )}
+              </CardContainer>
             );
           })}
         </div>

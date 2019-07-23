@@ -26,11 +26,6 @@ class Balance extends PureComponent {
   }
 }
 
-// old way without reselect
-// const mapStateToProps = state => ({
-//   totalPrice: state.total.price.toFixed(2),
-// });
-
 const mapStateToProps = state => ({
   totalPrice: totalPriceSelector(state),
 });

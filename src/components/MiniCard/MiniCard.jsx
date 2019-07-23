@@ -1,10 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import styles from './MiniCard.module.css';
 
-const MiniCard = ({ amount, type, name, curPrice, id, idx }) => {
-  const currAmount = curPrice && (amount * curPrice.USD).toFixed(2);
+const MiniCard = ({ amount, type, name, id, idx, currAmount }) => {
   return (
     <Link to={`/charts/${type}?i=${idx}`} className={styles.link}>
       <div className={type === id ? styles.mini_card_active : styles.mini_card}>
@@ -24,10 +22,4 @@ const MiniCard = ({ amount, type, name, curPrice, id, idx }) => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    curPrice: state.prices.types[ownProps.idx],
-  };
-};
-
-export default connect(mapStateToProps)(MiniCard);
+export default MiniCard;
