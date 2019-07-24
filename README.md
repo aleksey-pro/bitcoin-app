@@ -26,11 +26,12 @@ https://bitcoin-app-16476.firebaseapp.com/
 
 1. redux + reselect
 2. css-modules
-3. react-router
-4. create-react-app
-5. pwa 100% ready
-6. Cryptocompare API (https://min-api.cryptocompare.com/documentation)
-7. Графики http://recharts.org
+3. themes switch with react context
+4. react-router
+5. create-react-app
+6. pwa 100% ready
+7. Cryptocompare API (https://min-api.cryptocompare.com/documentation)
+8. Графики http://recharts.org
 
 ### Установка
 
