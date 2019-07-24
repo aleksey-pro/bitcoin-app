@@ -1,5 +1,11 @@
-.card {
+.dark_card {
   background: #3f3f4b;
+  border-radius: 1em;
+  margin: 1em 0;
+  padding: 0 1em;
+}
+.gray_card {
+  background: #2c2c2d;
   border-radius: 1em;
   margin: 1em 0;
   padding: 0 1em;

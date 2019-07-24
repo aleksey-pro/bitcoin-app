@@ -13,9 +13,18 @@ class Card extends Component {
   // }
 
   render() {
-    const { curPrice, amount, type, name, grow, idx, currAmount } = this.props;
+    const {
+      curPrice,
+      amount,
+      type,
+      name,
+      grow,
+      idx,
+      currAmount,
+      theme,
+    } = this.props;
     return (
-      <div className={styles.card}>
+      <div className={styles[`${theme.name}_card`]}>
         <Link to={`/charts/${type}?i=${idx}`} className={styles.link}>
           <div className={styles.card_block}>
             <div className={styles.card_icon}>

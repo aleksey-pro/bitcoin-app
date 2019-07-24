@@ -1,3 +1,7 @@
-.wrapper {
+.dark_wrapper {
   background: #363845;
+}
+
+.gray_wrapper {
+  background: #4a4b50;
 }

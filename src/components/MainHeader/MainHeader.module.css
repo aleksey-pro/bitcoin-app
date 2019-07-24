@@ -13,3 +13,13 @@
   fill: #fff;
   float: right;
 }
+
+.button {
+  background: transparent;
+  border: 1ps solid white;
+  border-radius: 2px;
+  color: White;
+  font-size: 0.8em;
+  padding: 0.3em;
+  outline: none;
+}
