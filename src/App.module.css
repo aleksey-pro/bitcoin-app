@@ -1,3 +1,5 @@
+@import './style-vars.css';
+
 html,
 body {
   box-sizing: border-box;
@@ -17,23 +19,5 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #363845;
-}
-
-/* Font colors */
-
-.whitec {
-  color: #fff;
-}
-
-.grayc {
-  color: #9c9ca4;
-}
-
-.greenc {
-  color: #0fdb86;
-}
-
-.redc {
-  color: #ff7976;
+  background-color: var(--dark-grey);
 }

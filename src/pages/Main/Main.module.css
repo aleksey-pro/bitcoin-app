@@ -1,7 +1,9 @@
 .dark_wrapper {
-  background: #363845;
+  background: var(--dark-grey);
 }
 
 .gray_wrapper {
+  /* not supported */
+  /* background: color(var(--dark-grey) shade(10%)); */
   background: #4a4b50;
 }

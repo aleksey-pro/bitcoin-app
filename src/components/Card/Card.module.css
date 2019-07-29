@@ -11,7 +11,7 @@
   padding: 0 1em;
 }
 .link {
-  composes: whitec from '../Common.module.css';
+  color: var(--whitec);
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
   float: right;
 }
 .card_name {
-  composes: grayc from '../Common.module.css';
+  color: var(--grayc);
 }
 .card_type {
   text-transform: uppercase;
@@ -45,23 +45,23 @@
   font-size: 1.2em;
 }
 .amount_cur {
-  composes: grayc from '../Common.module.css';
+  color: var(--grayc);
   padding-top: 0.2em;
 }
 .card_title {
-  composes: grayc from '../Common.module.css';
+  color: var(--grayc);
   padding-top: 0.2em;
 }
 .card_grow {
   text-align: right;
 }
 .grow_title {
-  composes: grayc from '../Common.module.css';
+  color: var(--grayc);
   padding-top: 0.2em;
 }
 .grow_green {
-  composes: greenc from '../Common.module.css';
+  color: var(--greenc);
 }
 .grow_red {
-  composes: redc from '../Common.module.css';
+  color: var(--redc);
 }

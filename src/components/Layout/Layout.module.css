@@ -4,7 +4,7 @@
   max-width: 31.25em;
   min-width: 18.75em;
   padding: 0 1em;
-  background: #363845;
+  background-color: var(--dark-grey);
   font-family: Arial, sans-serif;
-  composes: whitec from '../Common.module.css';
+  color: var(--whitec);
 }

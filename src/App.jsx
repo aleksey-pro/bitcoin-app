@@ -18,6 +18,8 @@ import Chart from './pages/Chart/Chart';
 
 import data from './config.json';
 
+import './App.module.css';
+
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))

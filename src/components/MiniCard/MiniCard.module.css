@@ -1,5 +1,5 @@
 .link {
-  composes: whitec from '../Common.module.css';
+  color: var(--whitec);
   text-decoration: none;
 }
 .mini_card {
