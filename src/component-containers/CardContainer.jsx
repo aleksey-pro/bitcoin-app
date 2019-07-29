@@ -4,12 +4,9 @@ import { fetchPrice } from '../actions';
 
 class CardContainer extends Component {
   componentDidMount() {
-    const { fetchPrice, routing, type } = this.props;
-    // Запретим фетчить данные при переходе по ссылке, чтобы сумма повтороно не считалась
+    const { fetchPrice, type } = this.props;
     const fetchType = type.toUpperCase();
-    routing.action === 'POP' &&
-      routing.pathname === '/' &&
-      fetchPrice(fetchType);
+    fetchPrice(fetchType);
   }
 
   render() {

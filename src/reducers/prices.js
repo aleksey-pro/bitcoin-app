@@ -18,6 +18,13 @@ const getPrices = (
         ...state,
         isFetching: true,
       };
+    case '@@router/LOCATION_CHANGE':
+      if (payload.pathname === '/') {
+        return {
+          ...state,
+          types: [],
+        };
+      } else return state;
     case FETCH_PRICE_SUCCESS:
       return {
         isFetching: false,
